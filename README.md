@@ -1,6 +1,6 @@
 ## 1800 flower coding challenge
 
-single page app for 1800flowers coding challenge.  
+Simple single page app for 1800flowers coding challenge.  
 Made with react context api
 
 ---
