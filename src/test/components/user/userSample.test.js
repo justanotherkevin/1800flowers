@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import UserSample from '../../../components/user/UserSample';
-import User from '../../../components/user/User';
+import UserDetailed from '../../../components/user/UserDetailed';
 
 const testUser = {
   id: 1,
@@ -21,3 +21,11 @@ it('renders correctly for SampleUser component', () => {
     .toJSON();
   expect(tree).toMatchSnapshot();
 });
+it('renders correctly for UserDetailed component', () => {
+  const tree = renderer
+    .create(<UserDetailed user={testUser}/>)
+    .toJSON();
+  expect(tree).toMatchSnapshot();
+});
+
+
