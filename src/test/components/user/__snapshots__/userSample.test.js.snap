@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly for SampleUser component 1`] = `
+<div
+  className="user-container col-lg-4 p-4"
+>
+  <img
+    alt=""
+    className="rounded-circle mb-5"
+    src=""
+  />
+  <p>
+    First Name: 
+    John
+  </p>
+  <p>
+    Last Name: 
+    Roberts
+  </p>
+  <button
+    className="btn btn-primary"
+    onClick={[Function]}
+  >
+    view details
+  </button>
+</div>
+`;
+
+exports[`renders correctly for sampleUser component 1`] = `
+<div
+  className="user-container col-lg-4 p-4"
+>
+  <img
+    alt=""
+    className="rounded-circle mb-5"
+    src=""
+  />
+  <p>
+    First Name: 
+    John
+  </p>
+  <p>
+    Last Name: 
+    Roberts
+  </p>
+  <button
+    className="btn btn-primary"
+    onClick={[Function]}
+  >
+    view details
+  </button>
+</div>
+`;
