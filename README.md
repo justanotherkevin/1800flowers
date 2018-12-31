@@ -10,6 +10,12 @@ To start the app
 ```
 git clone
 cd 1800flowers
-npm i
-npm run start
+npm install
+npm start
+```
+
+To run test
+
+```
+npm test
 ```
