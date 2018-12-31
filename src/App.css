@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .App-logo {
@@ -47,5 +49,39 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+.users-wrapper ul {
+  list-style-type: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+  max-height: 600px;
+  overflow: scroll;
+  overflow-y: scroll;
+  border: 1px solid gray;
+}
+
+@media only screen and (max-width: 600px) {
+  .users-wrapper ul {
+    grid-template-columns: 100%;
+    grid-template-rows: 170px;
+  }
+  .users-wrapper ul li:nth-child(even) {
+    background: lightslategray;
+  }
+  .sample-user-container {
+    display: grid;
+    grid-template-columns: 25% auto;
+    justify-items: start;
+    align-items: center;
+  }
+  .sample-user-container .sample-info {
+    text-align: start;
+  }
+  .sample-user-container .rounded-circle {
+    --circle: 80px;
   }
 }

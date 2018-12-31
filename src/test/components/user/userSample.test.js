@@ -1,10 +1,15 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { shallow, configure } from 'enzyme';
+import ShallowRenderer from 'react-test-renderer/shallow';
+
+import { shallow, configure, mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import UserSample from '../../../components/user/UserSample';
 import UserDetailed from '../../../components/user/UserDetailed';
 import App from '../../../App';
+import Users from '../../../components/user/Users';
+
+import MyProvider from '../../../Provider';
 
 configure({ adapter: new Adapter() });
 
@@ -19,6 +24,7 @@ const testUser = {
 const testFunction = () => {
   console.log('testfunction');
 };
+
 describe('for <SampleUser /> component', () => {
   it('renders correctly', () => {
     let tree = renderer
@@ -26,17 +32,31 @@ describe('for <SampleUser /> component', () => {
       .toJSON();
     expect(tree).toMatchSnapshot();
   });
-  // it('update store to show selected user', () => {
-  //   const app = shallow(<App />);
-  //   app.find('users-wrapper')[0].find('button').simulate('click');
-  //   app.update();
-  //   expect(app.find('.user-details-wrapper'));
-  // });
 });
 
 describe('for <UserDetailed /> component', () => {
   it('renders correctly for UserDetailed component', () => {
     let tree = renderer.create(<UserDetailed user={testUser} />).toJSON();
     expect(tree).toMatchSnapshot();
+  });
+});
+
+describe('App as a whole', () => {
+  it('On init render there are no selected user', () => {
+    const app = shallow(<App />);
+    const store = shallow(<MyProvider />);
+    expect(store.state().selectedUser).toEqual(null);
+    expect(app.find('.user-details').exists()).toEqual(false);
+  });
+  it('render user details component when btn clicked', () => {
+    const app = mount(<App />);
+    app
+      .find('.sample-user-container button')
+      .first()
+      .simulate('click');
+
+    app.update();
+
+    expect(app.find('.user-details').exists()).toEqual(true);
   });
 });

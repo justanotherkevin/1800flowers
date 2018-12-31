@@ -5,7 +5,7 @@ import UserDetailed from './UserDetailed';
 export default class User extends Component {
   render() {
     return (
-      <div className="user-details-wrapper row">
+      <div className="user-details-wrapper">
         <MyContext.Consumer>
           {context => {
             const user = context.selectedUser;

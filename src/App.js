@@ -9,7 +9,7 @@ class App extends Component {
   render() {
     return (
       <MyProvider>
-        <div className="App container">
+        <div className="App">
           <Users />
           <User />
         </div>

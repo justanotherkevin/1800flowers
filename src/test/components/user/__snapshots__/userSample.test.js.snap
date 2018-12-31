@@ -2,31 +2,103 @@
 
 exports[`for <SampleUser /> component renders correctly 1`] = `
 <div
-  className="user-container col-lg-4 p-4"
+  className="sample-user-container p-4"
 >
   <img
     alt=""
-    className="rounded-circle mb-5"
+    className="rounded-circle sample-image"
     src=""
   />
-  <p>
-    First Name: 
-    John
-  </p>
-  <p>
-    Last Name: 
-    Roberts
-  </p>
-  <button
-    className="btn btn-primary"
-    onClick={[Function]}
+  <div
+    className="sample-info"
   >
-    view details
-  </button>
+    <p>
+      First Name: 
+      John
+    </p>
+    <p>
+      Last Name: 
+      Roberts
+    </p>
+    <button
+      className="btn btn-primary"
+      onClick={[Function]}
+    >
+      view details
+    </button>
+  </div>
 </div>
 `;
 
+exports[`for <User/> component renders correctly for UserDetailed component 1`] = `
+Array [
+  <div
+    className="user-details col-md-7"
+  >
+    <h3>
+      John is a retired YouTuber
+    </h3>
+    <p>
+      John
+       
+      Roberts
+    </p>
+    <p>
+      Age 
+      51
+    </p>
+    <p>
+      Location 
+      Chicago, IL
+    </p>
+  </div>,
+  <div
+    className="user-img col-md-5"
+  >
+    <img
+      alt=""
+      className="img-fluid mx-auto"
+      src=""
+    />
+  </div>,
+]
+`;
+
 exports[`for <UserDetailed /> component renders correctly for UserDetailed component 1`] = `
+Array [
+  <div
+    className="user-details col-md-7"
+  >
+    <h3>
+      John is a retired YouTuber
+    </h3>
+    <p>
+      John
+       
+      Roberts
+    </p>
+    <p>
+      Age 
+      51
+    </p>
+    <p>
+      Location 
+      Chicago, IL
+    </p>
+  </div>,
+  <div
+    className="user-img col-md-5"
+  >
+    <img
+      alt=""
+      className="img-fluid mx-auto"
+      src=""
+    />
+  </div>,
+]
+`;
+
+exports[`for <UserDetailed /> component renders correctly for UserDetailed component 2`] = `
 Array [
   <div
     className="user-details col-md-7"
